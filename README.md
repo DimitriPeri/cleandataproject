@@ -121,6 +121,7 @@ The final step. The aggregate function is used to create the second, independent
 
 ```
 tidydataset <- aggregate(data[,-(1:2)], list(subject=data$subject, activity=data$activity), mean)
+write.table(tidydataset, file = "tidydataset.txt", row.names = F)
 ```
 Structure of "tidydataset" (sample):
 ------------------------------------
