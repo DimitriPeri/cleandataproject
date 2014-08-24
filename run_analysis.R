@@ -71,4 +71,6 @@ names(data) <- descriptivenames
 
 tidydataset <- aggregate(data[,-(1:2)], list(subject=data$subject, activity=data$activity), mean)
 
-# End of script
+# output
+write.table(tidydataset, file = "tidydataset.txt", row.names = F)
+
